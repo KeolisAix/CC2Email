@@ -110,7 +110,7 @@ Public Class Form1
             Dim e_mail As New MailMessage()
             Smtp_Server.EnableSsl = True
             Smtp_Server.UseDefaultCredentials = True
-            Smtp_Server.Credentials = New Net.NetworkCredential("pmaldi", "Ilete1fois")
+            Smtp_Server.Credentials = New Net.NetworkCredential("pmaldi", "")
             Smtp_Server.DeliveryMethod = SmtpDeliveryMethod.Network
             Smtp_Server.Port = 25
             Smtp_Server.Host = "webmail.keolis.com"
