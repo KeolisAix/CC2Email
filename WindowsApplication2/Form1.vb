@@ -110,13 +110,13 @@ Public Class Form1
             Dim e_mail As New MailMessage()
             Smtp_Server.EnableSsl = True
             Smtp_Server.UseDefaultCredentials = True
-            Smtp_Server.Credentials = New Net.NetworkCredential("pmaldi", "Ilete1fois")
+            Smtp_Server.Credentials = New Net.NetworkCredential("cellules_compt", "123456789")
             Smtp_Server.DeliveryMethod = SmtpDeliveryMethod.Network
             Smtp_Server.Port = 25
             Smtp_Server.Host = "webmail.keolis.com"
 
             e_mail = New MailMessage()
-            e_mail.From = New MailAddress("patrice.maldi@keolis.com")
+            e_mail.From = New MailAddress("cellules_compt@keolis.com")
             e_mail.To.Add("patrice.maldi@keolis.com")
             e_mail.CC.Add("sylvain.mennillo@keolis.com")
             e_mail.CC.Add("patrick.schinle@keolis.com")
@@ -130,7 +130,6 @@ Public Class Form1
                 e_mail.Attachments.Add(New Attachment(Evenement))
                 sb.AppendLine("<br><br><center>" + LignePlus10 + "</center><br>")
                 sb.AppendLine("<br><br><center>" + LignePasInfo + "</center>")
-
             End If
             e_mail.Body = sb.ToString()
             Smtp_Server.Send(e_mail)
